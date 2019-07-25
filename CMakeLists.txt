@@ -33,6 +33,9 @@ add_definitions(-D_GLAPI_NO_EXPORTS)
 
 if(MSVC)
   add_definitions(-D_USE_MATH_DEFINES)
+else()
+  add_definitions(-DHAVE_PTHREAD)
+  add_definitions(-DHAVE_TIMESPEC_GET)
 endif()
 
 include_directories(${mesa_SOURCE_DIR}/include)
