@@ -30,6 +30,7 @@ add_definitions(-DPACKAGE_VERSION="19.1.2")
 add_definitions(-DPACKAGE_BUGREPORT="https://bugs.freedesktop.org/enter_bug.cgi?product=Mesa")
 add_definitions(-DBUILD_GL32)
 add_definitions(-D_GLAPI_NO_EXPORTS)
+set(CMAKE_DEBUG_POSTFIX d)
 
 if(MSVC)
   add_definitions(-D_USE_MATH_DEFINES)
@@ -54,6 +55,13 @@ include_directories(${mesa_SOURCE_DIR}/include)
 
 add_subdirectory(bin)
 add_subdirectory(src)
+
+install(TARGETS osmesa
+        RUNTIME DESTINATION bin
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib)
+install(DIRECTORY include/GL/ DESTINATION include/GL)
+install(DIRECTORY include/KHR/ DESTINATION include/KHR)
 
 #project(
 #  'mesa',
