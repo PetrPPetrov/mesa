@@ -117,7 +117,7 @@ OUTPUT_FILE format_srgb.c
 WORKING_DIRECTORY ${mesa_src_util_SOURCE_DIR}
 )
 
-add_library(libmesa_util STATIC
+add_library(mesa_util STATIC
 ${files_mesa_util}
 format_srgb.c
 )

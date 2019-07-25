@@ -660,17 +660,18 @@ add_subdirectory(drivers/osmesa)
 
 include_directories(${mesa_src_mesa_SOURCE_DIR}/main)
 include_directories(${mesa_src_SOURCE_DIR}/compiler)
-add_library(libmesa_classic STATIC
+add_library(mesa_classic STATIC
 ${files_libmesa_common}
 ${files_libmesa_classic}
 )
-target_link_libraries(libmesa_classic libglsl)
+target_link_libraries(mesa_classic glsl)
 
-add_library(libmesa_gallium
-${files_libmesa_common}
-${files_libmesa_gallium}
-)
-target_link_libraries(libmesa_gallium libglsl)
+# Gallium is not required for now
+#add_library(mesa_gallium
+#${files_libmesa_common}
+#${files_libmesa_gallium}
+#)
+#target_link_libraries(mesa_gallium glsl)
 
 #subdir('program')
 #subdir('main')

@@ -209,7 +209,7 @@ ${mesa_src_compiler_nir_SOURCE_DIR}/../spirv/vtn_variables.c
 
 include_directories(${mesa_src_compiler_SOURCE_DIR}/spirv)
 include_directories(${mesa_src_compiler_nir_SOURCE_DIR})
-add_library(libnir STATIC
+add_library(nir STATIC
 ${files_libnir}
 ${mesa_src_compiler_spirv_SOURCE_DIR}/spirv_info.c
 ${mesa_src_compiler_nir_SOURCE_DIR}/nir_opt_algebraic.c
@@ -221,7 +221,7 @@ nir_intrinsics.c
 nir_intrinsics.h
 ../spirv/vtn_gather_types.c
 )
-target_link_libraries(libnir libcompiler)
+target_link_libraries(nir сompiler)
 
 #nir_depends = files('nir_opcodes.py', 'nir_intrinsics.py')
 #

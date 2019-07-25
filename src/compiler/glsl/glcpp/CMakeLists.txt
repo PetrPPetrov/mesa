@@ -42,14 +42,14 @@ glcpp.h
 pp.c
 )
 
-target_link_libraries(libglcpp libmesa_util)
+target_link_libraries(libglcpp mesa_util)
 
 add_executable(glcpp
 glcpp.c
 ${mesa_src_SOURCE_DIR}/getopt/getopt_long.c
 )
 
-target_link_libraries(glcpp libglcpp libglsl_util)
+target_link_libraries(glcpp libglcpp glsl_util)
 
 #glcpp_parse = custom_target(
 #  'glcpp-parse.[ch]',

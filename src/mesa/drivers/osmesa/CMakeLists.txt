@@ -22,12 +22,12 @@ project(mesa_src_mesa_drivers_osmesa)
 
 cmake_minimum_required(VERSION 3.4)
 
-add_library(libosmesa STATIC
+add_library(osmesa STATIC
 ${mesa_src_mesa_drivers_osmesa_SOURCE_DIR}/osmesa.c
 ${mesa_src_SOURCE_DIR}/mapi/glapi/gen/glapitable.h
 ${mesa_src_SOURCE_DIR}/mapi/glapi/gen/glapitemp.h
 )
-target_link_libraries(libosmesa libmesa_classic libglapi_static)
+target_link_libraries(osmesa mesa_classic glapi_static)
 
 #osmesa_link_with = []
 #

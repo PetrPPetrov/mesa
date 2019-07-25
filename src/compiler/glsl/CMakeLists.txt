@@ -213,7 +213,7 @@ standalone.h
 include_directories(${mesa_src_compiler_SOURCE_DIR})
 include_directories(${mesa_src_compiler_nir_SOURCE_DIR})
 
-add_library(libglsl STATIC
+add_library(glsl STATIC
 ${files_libglsl}
 glsl_parser.cpp
 glsl_parser.h
@@ -223,20 +223,21 @@ ir_expression_operation_strings.h
 ir_expression_operation_constant.h
 float64_glsl.h
 )
-target_link_libraries(libglsl libglcpp libnir)
+target_link_libraries(glsl libglcpp nir)
 
-include_directories(${mesa_src_SOURCE_DIR}/getopt)
-add_library(libglsl_standalone STATIC
-${files_libglsl_standalone}
-${mesa_src_compiler_SOURCE_DIR}/ir_expression_operation.h
-${mesa_src_SOURCE_DIR}/getopt/getopt_long.c
-)
-target_link_libraries(libglsl_standalone libglsl libglsl_util libmesa_util)
-
-add_executable(glsl_compiler
-main.cpp
-)
-target_link_libraries(glsl_compiler libglsl_standalone libglsl libglsl_util libmesa_util libglcpp)
+# These libraries are not required for now
+#include_directories(${mesa_src_SOURCE_DIR}/getopt)
+#add_library(glsl_standalone STATIC
+#${files_libglsl_standalone}
+#${mesa_src_compiler_SOURCE_DIR}/ir_expression_operation.h
+#${mesa_src_SOURCE_DIR}/getopt/getopt_long.c
+#)
+#target_link_libraries(glsl_standalone glsl glsl_util mesa_util)
+#
+#add_executable(glsl_compiler
+#main.cpp
+#)
+#target_link_libraries(glsl_compiler glsl_standalone glsl glsl_util mesa_util libglcpp)
 
 
 #subdir('glcpp')

@@ -72,7 +72,7 @@ else()
   # add_definitions(-DMAPI_ABI_HEADER="${mesa_src_mapi_glapi_SOURCE_DIR}/gen/glapi_mapi_tmp.h")
 endif()
 
-add_library(libglapi_static STATIC
+add_library(glapi_static STATIC
 ${static_glapi_files}
 )
 

@@ -38,7 +38,7 @@ WORKING_DIRECTORY ${mesa_src_mapi_shared_glapi_SOURCE_DIR}
 )
 
 add_definitions(-DMAPI_ABI_HEADER="${mesa_src_mapi_shared_glapi_SOURCE_DIR}/glapi_mapi_tmp.h")
-add_library(libglapi SHARED
+add_library(glapi SHARED
 ${files_mapi_glapi}
 ${files_mapi_util}
 ${mesa_src_mapi_shared_glapi_SOURCE_DIR}/glapi_mapi_tmp.h

@@ -43,7 +43,7 @@ shader_enums.h
 shader_info.h
 )
 
-add_library(libcompiler STATIC
+add_library(compiler STATIC
 ${files_libcompiler}
 ${mesa_src_compiler_SOURCE_DIR}/ir_expression_operation.h
 )

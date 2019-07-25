@@ -30,7 +30,7 @@ ${mesa_src_SOURCE_DIR}/gallium/include
 ${mesa_src_SOURCE_DIR}/gallium/auxiliary
 )
 
-add_library(libglsl_util STATIC
+add_library(glsl_util STATIC
 ${mesa_src_SOURCE_DIR}/mesa/main/extensions_table.c
 ${mesa_src_SOURCE_DIR}/mesa/main/imports.c
 ${mesa_src_SOURCE_DIR}/mesa/program/prog_parameter.c
