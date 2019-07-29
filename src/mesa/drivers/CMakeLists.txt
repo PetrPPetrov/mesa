@@ -18,44 +18,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-project(mesa_src_mesa_drivers_osmesa)
+project(mesa_src_mesa_drivers)
 
 cmake_minimum_required(VERSION 3.4)
 
-add_library(osmesa SHARED
-${mesa_src_mesa_drivers_osmesa_SOURCE_DIR}/osmesa.c
-${mesa_src_SOURCE_DIR}/mapi/glapi/gen/glapitable.h
-${mesa_src_SOURCE_DIR}/mapi/glapi/gen/glapitemp.h
-)
-target_link_libraries(osmesa mesa_classic glapi_static)
-
-#osmesa_link_with = []
-#
-#if with_shared_glapi
-#  osmesa_link_with += libglapi
-#endif
-#
-#libosmesa = shared_library(
-#  osmesa_lib_name,
-#  ['osmesa.c', glapitable_h, glapitemp_h],
-#  c_args : c_vis_args,
-#  cpp_args : cpp_vis_args,
-#  link_args : ld_args_gc_sections,
-#  include_directories : [
-#    inc_include, inc_src, inc_mapi, inc_mesa, inc_gallium, inc_gallium_aux,
-#  ],
-#  link_whole : libglapi_static,
-#  link_with : [libmesa_classic, osmesa_link_with],
-#  dependencies : [dep_thread, dep_selinux],
-#  version : '8.0.0',
-#  install : true,
-#)
-#
-#pkg.generate(
-#  name : 'osmesa',
-#  description : 'Mesa Off-screen Rendering Library',
-#  version : '8.0.0',
-#  libraries : libosmesa,
-#  libraries_private : gl_priv_libs,
-#)
-#
+add_subdirectory(osmesa)

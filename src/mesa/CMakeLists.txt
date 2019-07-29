@@ -654,10 +654,6 @@ ${mesa_src_mesa_SOURCE_DIR}/main/remap_helper.h
 ${mesa_src_SOURCE_DIR}/git_sha1.h
 )
 
-add_subdirectory(program)
-add_subdirectory(main)
-add_subdirectory(drivers/osmesa)
-
 include_directories(${mesa_src_mesa_SOURCE_DIR}/main)
 include_directories(${mesa_src_SOURCE_DIR}/compiler)
 add_library(mesa_classic STATIC
@@ -665,6 +661,10 @@ ${files_libmesa_common}
 ${files_libmesa_classic}
 )
 target_link_libraries(mesa_classic glsl)
+
+add_subdirectory(program)
+add_subdirectory(main)
+add_subdirectory(drivers)
 
 # Gallium is not required for now
 #add_library(mesa_gallium

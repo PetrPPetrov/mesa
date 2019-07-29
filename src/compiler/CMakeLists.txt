@@ -31,21 +31,16 @@ WORKING_DIRECTORY ${mesa_src_compiler_SOURCE_DIR}
 include_directories(${mesa_src_compiler_SOURCE_DIR})
 
 set(files_libcompiler
-blob.c
-blob.h
-builtin_type_macros.h
-glsl_types.cpp
-glsl_types.h
-nir_types.cpp
-nir_types.h
-shader_enums.c
-shader_enums.h
-shader_info.h
-)
-
-add_library(compiler STATIC
-${files_libcompiler}
-${mesa_src_compiler_SOURCE_DIR}/ir_expression_operation.h
+${mesa_src_compiler_SOURCE_DIR}/blob.c
+${mesa_src_compiler_SOURCE_DIR}/blob.h
+${mesa_src_compiler_SOURCE_DIR}/builtin_type_macros.h
+${mesa_src_compiler_SOURCE_DIR}/glsl_types.cpp
+${mesa_src_compiler_SOURCE_DIR}/glsl_types.h
+${mesa_src_compiler_SOURCE_DIR}/nir_types.cpp
+${mesa_src_compiler_SOURCE_DIR}/nir_types.h
+${mesa_src_compiler_SOURCE_DIR}/shader_enums.c
+${mesa_src_compiler_SOURCE_DIR}/shader_enums.h
+${mesa_src_compiler_SOURCE_DIR}/shader_info.h
 )
 
 #include_directories(${mesa_src_compiler_SOURCE_DIR}/spirv)
