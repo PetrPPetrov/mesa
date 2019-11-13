@@ -662,6 +662,8 @@ ${files_libmesa_classic}
 )
 target_link_libraries(mesa_classic glsl)
 
+vtsl_set_crt(mesa_classic)
+
 add_subdirectory(program)
 add_subdirectory(main)
 add_subdirectory(drivers)

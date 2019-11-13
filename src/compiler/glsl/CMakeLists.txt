@@ -225,6 +225,8 @@ float64_glsl.h
 )
 target_link_libraries(glsl libglcpp nir)
 
+vtsl_set_crt(glsl)
+
 # These libraries are not required for now
 #include_directories(${mesa_src_SOURCE_DIR}/getopt)
 #add_library(glsl_standalone STATIC

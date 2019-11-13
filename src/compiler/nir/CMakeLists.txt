@@ -212,6 +212,8 @@ ${files_libcompiler}
 ${mesa_src_compiler_SOURCE_DIR}/ir_expression_operation.h
 )
 
+vtsl_set_crt(libmesacompiler)
+
 include_directories(${mesa_src_compiler_SOURCE_DIR}/spirv)
 include_directories(${mesa_src_compiler_nir_SOURCE_DIR})
 add_library(nir STATIC
@@ -227,6 +229,8 @@ nir_intrinsics.h
 ../spirv/vtn_gather_types.c
 )
 target_link_libraries(nir libmesacompiler)
+
+vtsl_set_crt(nir)
 
 #nir_depends = files('nir_opcodes.py', 'nir_intrinsics.py')
 #

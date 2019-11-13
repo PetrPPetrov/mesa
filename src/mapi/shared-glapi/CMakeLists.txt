@@ -44,6 +44,8 @@ ${files_mapi_util}
 ${mesa_src_mapi_shared_glapi_SOURCE_DIR}/glapi_mapi_tmp.h
 )
 
+vtsl_set_crt(glapi)
+
 #files_mapi_glapi = files(
 #  '../entry.c',
 #  '../mapi_glapi.c',

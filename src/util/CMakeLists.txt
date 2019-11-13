@@ -122,6 +122,8 @@ ${files_mesa_util}
 format_srgb.c
 )
 
+vtsl_set_crt(mesa_util)
+
 #add_library(libxmlconfig STATIC
 #${files_xmlconfig}
 #)

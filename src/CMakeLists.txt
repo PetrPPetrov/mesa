@@ -38,6 +38,8 @@ ${mesa_src_SOURCE_DIR}/mesa/program/symbol_table.c
 ${mesa_src_SOURCE_DIR}/mesa/program/dummy_errors.c
 )
 
+vtsl_set_crt(glsl_util)
+
 execute_process(
 COMMAND ${PYTHON_EXECUTABLE} ${git_sha1_gen_py} --output git_sha1.h
 WORKING_DIRECTORY ${mesa_src_SOURCE_DIR}

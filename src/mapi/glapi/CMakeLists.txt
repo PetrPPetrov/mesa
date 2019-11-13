@@ -76,6 +76,8 @@ add_library(glapi_static STATIC
 ${static_glapi_files}
 )
 
+vtsl_set_crt(glapi_static)
+
 #subdir('gen')
 #
 #inc_glapi = include_directories('.')
